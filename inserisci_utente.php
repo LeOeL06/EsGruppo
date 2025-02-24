@@ -11,8 +11,10 @@
         <input type="text" id="nome" name="nome" required><br>
         <label for="cognome">Cognome:</label>
         <input type="text" id="cognome" name="cognome" required><br>
-        <label for="residenza">Residenza:</label>
-        <input type="text" id="residenza" name="residenza" required><br>
+        <label for="indirizzo">Indirizzo:</label>
+        <input type="text" id="indirizzo" name="indirizzo" required><br>
+        <label for="citta">Città:</label>
+        <input type="text" id="citta" name="citta" required><br>
         <input type="submit" value="Salva">
     </form>
 </body>
