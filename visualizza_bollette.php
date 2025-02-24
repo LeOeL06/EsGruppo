@@ -18,7 +18,7 @@
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["data_inizio"]) && isset($_GET["data_fine"])) {
         // Connessione al database
-        $conn = new mysqli("localhost", "username", "password", "database");
+        $conn = new mysqli("localhost", "root", "", "utenze");
         if ($conn->connect_error) {
             die("Connessione fallita: " . $conn->connect_error);
         }
@@ -29,7 +29,7 @@
 
         $sql = "SELECT * FROM bollette WHERE data BETWEEN '$data_inizio' AND '$data_fine'";
         if (!empty($cognome)) {
-            $sql .= " AND utente_id IN (SELECT id FROM utenti WHERE cognome='$cognome')";
+            $sql .= " AND utente_id IN (SELECT id FROM utenti WHERE Cognome='$cognome')";
         }
 
         $result = $conn->query($sql);
