@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Modifica Residenza</h1>
-    <form action="salva_residenza.php" method="post">
+    <form action="modifica_residenza.php" method="post">
         <label for="codice_utente">Codice Utente:</label>
         <input type="text" id="codice_utente" name="codice_utente" required><br>
         <label for="nuovo_indirizzo">Nuovo Indirizzo:</label>

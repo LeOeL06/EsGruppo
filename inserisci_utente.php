@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Inserisci Nuovo Utente</h1>
-    <form action="salva_utente.php" method="post">
+    <form action="inserisci_utente.php" method="post">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required><br>
         <label for="cognome">Cognome:</label>

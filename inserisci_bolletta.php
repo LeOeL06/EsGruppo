@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Inserisci Nuova Bolletta</h1>
-    <form action="salva_bolletta.php" method="post">
+    <form action="inserisci_bolletta.php" method="post">
         <label for="cod_utente">Codice Utente:</label>
         <input type="text" id="cod_utente" name="cod_utente" required><br>
         <label for="data">Data:</label>
