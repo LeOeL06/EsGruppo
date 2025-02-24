@@ -17,5 +17,28 @@
         <input type="text" id="citta" name="citta" required><br>
         <input type="submit" value="Salva">
     </form>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $conn = new mysqli("localhost", "root", "", "utenze");
+        if ($conn->connect_error) {
+            die("Connessione fallita: " . $conn->connect_error);
+        }
+
+        $nome = $_POST["nome"];
+        $cognome = $_POST["cognome"];
+        $indirizzo = $_POST["indirizzo"];
+        $citta = $_POST["citta"];
+
+        $sql = "INSERT INTO utenti (Nome, Cognome, Indirizzo, Citta) VALUES ('$nome', '$cognome', '$indirizzo', '$citta')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Nuovo utente inserito con successo.";
+        } else {
+            echo "Errore: " . $sql . "<br>" . $conn->error;
+        }
+
+        $conn->close();
+    }
+    ?>
 </body>
 </html>

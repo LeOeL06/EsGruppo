@@ -17,5 +17,29 @@
         <input type="number" id="consumo" name="consumo" required><br>
         <input type="submit" value="Salva">
     </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $conn = new mysqli("localhost", "root", "", "utenze");
+        if ($conn->connect_error) {
+            die("Connessione fallita: " . $conn->connect_error);
+        }
+
+        $cod_utente = $_POST["cod_utente"];
+        $data = $_POST["data"];
+        $importo = $_POST["importo"];
+        $consumo = $_POST["consumo"];
+
+        $sql = "INSERT INTO bollette (CodUtente, Data, Importo, Consumo) VALUES ('$cod_utente', '$data', '$importo', '$consumo')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Nuova bolletta inserita con successo.";
+        } else {
+            echo "Errore: " . $sql . "<br>" . $conn->error;
+        }
+
+        $conn->close();
+    }
+    ?>
 </body>
 </html>
