@@ -53,5 +53,6 @@
         $conn->close();
     }
     ?>
+    <a href="index.php">Ritorna alla homepage</a>
 </body>
 </html>
