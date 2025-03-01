@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Inserisci Nuovo Utente</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Inserisci Nuovo Utente</h1>
