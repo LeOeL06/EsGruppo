@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Gestione DB Utenze</h1>
+    <!-- Menu di navigazione -->
     <ul>
         <li><a href="inserisci_utente.php">Inserisci nuovo utente</a></li>
         <li><a href="inserisci_bolletta.php">Inserisci nuova bolletta</a></li>
