@@ -13,6 +13,7 @@
         <li><a href="inserisci_bolletta.php">Inserisci nuova bolletta</a></li>
         <li><a href="visualizza_bollette.php">Visualizza bollette</a></li>
         <li><a href="modifica_residenza.php">Modifica residenza</a></li>
+        <li><a href="report_consumi.php">Report consumi per città</a></li>
     </ul>
 </body>
 </html>
